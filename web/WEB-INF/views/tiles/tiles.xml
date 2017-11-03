@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Definition -->
+    <definition name="base-definition"
+                template="/WEB-INF/views/pages/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+    </definition>
+
+    <!-- PC Repair Registration -->
+    <definition name="pc-repair-form" extends="base-definition">
+        <put-attribute name="title" value="PC Repair Registration" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-repair-form.jsp"/>
+    </definition>
+
+    <!-- PC Repair Table -->
+    <definition name="pc-repair-table" extends="base-definition">
+        <put-attribute name="title" value="PC Repair Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-repair-table.jsp" />
+    </definition>
+
+    <!-- PC Spare Table -->
+    <definition name="pc-spare" extends="base-definition">
+        <put-attribute name="title" value="PC Spare Registration" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-spare.jsp" />
+    </definition>
+
+    <!-- PC Spare Table -->
+    <definition name="pc-spare-table" extends="base-definition">
+        <put-attribute name="title" value="PC Spare Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-spare-table.jsp" />
+    </definition>
+
+    <!-- PC Spare Table -->
+    <definition name="pc-spare-withdrawal-table" extends="base-definition">
+        <put-attribute name="title" value="PC Spare Withdrawal Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-spare-withdrawal-table.jsp" />
+    </definition>
+
+
+    <!-- login Page -->
+    <definition name="login" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/include/header-login.jsp" />
+        <put-attribute name="title" value="Login Page" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+    </definition>
+
+    <!-- New Spare Page-->
+    <definition name="new-spare" extends="base-definition">
+        <put-attribute name="title" value="New Spare Registration" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/new-spare.jsp" />
+    </definition>
+
+    <!-- New Spare Page-->
+    <definition name="new-spare-table" extends="base-definition">
+        <put-attribute name="title" value="New Spare Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/new-spare-table.jsp" />
+    </definition>
+
+    <!-- New Spare Page-->
+    <definition name="new-spare-withdrawal-table" extends="base-definition">
+        <put-attribute name="title" value="New Spare Withdrawal Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/new-spare-withdrawal-table.jsp" />
+    </definition>
+
+    <!-- HDD Form page -->
+    <definition name="hdd-form" extends="base-definition">
+        <put-attribute name="title" value="HDD Registration"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/hdd-form.jsp"/>
+    </definition>
+
+    <definition name="hdd-spare-table" extends="base-definition">
+        <put-attribute name="title" value="HDD Spare Inventory"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/hdd-spare-table.jsp"/>
+    </definition>
+
+    <definition name="hdd-withdrawal-table" extends="base-definition">
+        <put-attribute name="title" value="HDD Withdrawal Inventory"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/hdd-withdrawal-table.jsp"/>
+    </definition>
+
+    <!-- NG PC Parts page -->
+    <definition name="ng-pc-parts-form" extends="base-definition">
+        <put-attribute name="title" value="NG PC Parts Registration" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/ng-pc-parts-form.jsp" />
+    </definition>
+
+    <definition name="ng-pc-parts-table" extends="base-definition">
+        <put-attribute name="title" value="NG PC Parts Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/ng-pc-parts-table.jsp" />
+    </definition>
+
+    <definition name="pc-endorsement-form" extends="base-definition">
+        <put-attribute name="title" value="PC Endorsement Registration" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-endorsement-form.jsp" />
+    </definition>
+
+    <definition name="pc-endorsement-table" extends="base-definition">
+        <put-attribute name="title" value="PC Endorsement Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/pc-endorsement-table.jsp" />
+    </definition>
+
+    <!--Error page-->
+    <definition name="error" extends="base-definition">
+        <put-attribute name="title" value="Error Page" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/error.jsp" />
+    </definition>
+
+    <!-- User Registration -->
+    <definition name="user-registration" extends="base-definition">
+        <put-attribute name="title" value="User Registration" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/user-registration.jsp" />
+    </definition>
+
+    <!-- Users Table-->
+    <definition name="users-table" extends="base-definition">
+        <put-attribute name="title" value="PC Endorsement Inventory" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/users-table.jsp" />
+    </definition>
+
+    <!--Access Denied-->
+    <definition name="403" extends="base-definition">
+        <put-attribute name="title" value="Access Denied" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/403.jsp" />
+    </definition>
+
+
+</tiles-definitions>
