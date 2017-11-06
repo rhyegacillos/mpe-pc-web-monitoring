@@ -17,12 +17,11 @@
         <table class="table main-table">
             <thead>
             <tr>
-                <%--<th><a href="<spring:url value="/pageAndSort/paging?page=0&sort=moduleNo"/>" class="th-link">Module Number</a></th>--%>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=moduleNo"/>" class="th-link">Module Number</a></th>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=hddSize"/>" class="th-link">HDD Size</a></th>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=brand"/>" class="th-link">Brand</a></th>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=purpose"/>" class="th-link">Purpose</a></th>
-                <th><a href="<spring:url value="withdrawalTable?page=0&sort=dateWithdrawn"/>" class="th-link">Date Withdrawn</a></th>
+                <th><a href="<spring:url value="withdrawalTable?page=0&sort=dateWithdrawn,desc"/>" class="th-link">Date Withdrawn</a></th>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=withdrawnBy"/>" class="th-link">Withdrawn By</a></th>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=useFor"/>" class="th-link">Use For</a></th>
                 <th><a href="<spring:url value="withdrawalTable?page=0&sort=mac"/>" class="th-link">MAC Address</a></th>
@@ -57,8 +56,14 @@
                 </td>
                 <td colspan="12">
                     <ul class="pagination custom-pagination-tfoot">
-                        <li><a href="<spring:url value="withdrawalTable?page=${hddPage.number - 1}&sort=${sort}"/>">Previous</a></li>
-                        <li><a href="<spring:url value="withdrawalTable?page=${hddPage.number + 1}&&sort=${sort}"/>">Next</a></li>
+                        <c:choose>
+                            <c:when test="${hddPage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="withdrawalTable?page=${hddPage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${hddPage.last}"><li><a class="last-page">Next</a></li></c:when>
+                            <c:otherwise><li><li><a href="<spring:url value="withdrawalTable?page=${hddPage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                        </c:choose>
                         <li><a href="downloadWithdrawals">Export to Excel</a> </li>
                     </ul>
                 </td>

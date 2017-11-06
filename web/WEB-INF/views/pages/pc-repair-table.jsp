@@ -100,8 +100,16 @@
             </tfoot>
         </table>
         <ul class="pagination custom-pagination">
-            <li><a href="<spring:url value="/pcRepair/pcRepairTable?page=${page.number - 1}&sort=${sort}"/>">Previous</a></li>
-            <li><a href="<spring:url value="/pcRepair/pcRepairTable?page=${page.number + 1}&&sort=${sort}"/>">Next</a></li>
+            <c:choose>
+                <c:when test="${page.first}"><li><a class="first-page">Previous</a></li></c:when>
+                <c:otherwise><li><a href="<spring:url value="pcRepairTable?page=${page.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+            </c:choose>
+            <c:choose>
+                <c:when test="${page.last}"><li><a class="last-page">Next</a></li></c:when>
+                <c:otherwise><li><a href="<spring:url value="pcRepairTable?page=${page.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+            </c:choose>
+            <%--<li><a href="<spring:url value="/pcRepair/pcRepairTable?page=${page.number - 1}&sort=${sort}"/>">Previous</a></li>--%>
+            <%--<li><a href="<spring:url value="/pcRepair/pcRepairTable?page=${page.number + 1}&&sort=${sort}"/>">Next</a></li>--%>
             <li><a href="download">Export to Excel</a> </li>
         </ul>
     </div>

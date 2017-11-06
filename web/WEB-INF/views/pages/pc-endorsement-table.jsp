@@ -50,8 +50,14 @@
             </tfoot>
         </table>
         <ul class="pagination custom-pagination">
-            <li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number - 1}&sort=${sort}"/>">Previous</a></li>
-            <li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number + 1}&&sort=${sort}"/>">Next</a></li>
+            <c:choose>
+                <c:when test="${pcEndorsePage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                <c:otherwise><li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+            </c:choose>
+            <c:choose>
+                <c:when test="${pcEndorsePage.last}"><li><a class="last-page">Next</a></li></c:when>
+                <c:otherwise><li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+            </c:choose>
             <li><a href="download">Export to Excel</a> </li>
         </ul>
     </div>

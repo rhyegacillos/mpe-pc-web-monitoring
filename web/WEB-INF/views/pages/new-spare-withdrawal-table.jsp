@@ -53,8 +53,16 @@
                 </td>
                 <td colspan="9">
                     <ul class="pagination custom-pagination-tfoot">
-                        <li><a href="<spring:url value="withdrawTable?page=${newSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>
-                        <li><a href="<spring:url value="withdrawTable?page=${newSparePage.number + 1}"/>&sort=${sort}">Next</a></li>
+                        <c:choose>
+                            <c:when test="${newSparePage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="withdrawTable?page=${newSparePage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${newSparePage.last}"><li><a class="last-page">Next</a></li></c:when>
+                            <c:otherwise><li><li><a href="<spring:url value="withdrawTable?page=${newSparePage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                        </c:choose>
+                        <%--<li><a href="<spring:url value="withdrawTable?page=${newSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>--%>
+                        <%--<li><a href="<spring:url value="withdrawTable?page=${newSparePage.number + 1}"/>&sort=${sort}">Next</a></li>--%>
                         <li><a href="downloadWithdrawals">Export to Excel</a> </li>
                     </ul>
                 </td>

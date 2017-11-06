@@ -50,8 +50,14 @@
                 </td>
                 <td colspan="5">
                     <ul class="pagination custom-pagination-tfoot">
-                        <li><a href="<spring:url value="/newSpare/loadTable?page=${newSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>
-                        <li><a href="<spring:url value="/newSpare/loadTable?page=${newSparePage.number + 1}"/>&sort=${sort}">Next</a></li>
+                        <c:choose>
+                            <c:when test="${newSparePage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="loadTable?page=${newSparePage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${newSparePage.last}"><li><a class="last-page">Next</a></li></c:when>
+                            <c:otherwise><spring:url value="loadTable?page=${newSparePage.number + 1}"/>&sort=${sort}"></c:otherwise>
+                        </c:choose>
                         <li><a href="downloadSpares">Export to Excel</a> </li>
                     </ul>
                 </td>

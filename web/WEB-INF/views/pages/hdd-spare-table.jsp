@@ -20,7 +20,6 @@
         <table class="table main-table">
             <thead>
             <tr>
-                <%--<th><a href="<spring:url value="/pageAndSort/paging?page=0&sort=moduleNo"/>" class="th-link">Module Number</a></th>--%>
                 <th><a href="<spring:url value="hddTable?page=0&sort=moduleNo"/>" class="th-link">Module Number</a></th>
                 <th><a href="<spring:url value="hddTable?page=0&sort=hddSize"/>" class="th-link">HDD Size</a></th>
                 <th><a href="<spring:url value="hddTable?page=0&sort=brand"/>" class="th-link">Brand</a></th>
@@ -46,9 +45,15 @@
                 </td>
                 <td colspan="4">
                     <ul class="pagination custom-pagination-tfoot">
-                        <li><a href="<spring:url value="/hdd/hddTable?page=${hddPage.number - 1}&sort=${sort}"/>">Previous</a></li>
-                        <li><a href="<spring:url value="/hdd/hddTable?page=${hddPage.number + 1}&&sort=${sort}"/>">Next</a></li>
-                        <li><a href="downloadSpares">Export to Excel</a> </li>
+                        <c:choose>
+                            <c:when test="${hddPage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="/hdd/hddTable?page=${hddPage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${hddPage.last}"><li><a class="last-page">Next</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="/hdd/hddTable?page=${hddPage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                        </c:choose>
+                        <li><a href="downloadSpares">Export to Excel</a></li>
                     </ul>
                 </td>
             </tr>

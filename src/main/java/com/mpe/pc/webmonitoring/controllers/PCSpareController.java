@@ -60,6 +60,7 @@ public class PCSpareController {
         Page<PCSpare> pcSparePage = pcSpareService.repairPCSpareRecords(1,pageable);
         Long pcSparesTotal = pcSparePage.getTotalElements();
 
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("pcSparePage", pcSparePage);
         model.addAttribute("pcSparesTotal", pcSparesTotal);
 
@@ -72,6 +73,7 @@ public class PCSpareController {
         Page<PCSpare> pcSparePage = pcSpareService.repairPCSpareRecords(0,pageable);
         Long pcSparesTotal = pcSparePage.getTotalElements();
 
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("pcSparePage", pcSparePage);
         model.addAttribute("pcSparesTotal", pcSparesTotal);
 
@@ -94,9 +96,6 @@ public class PCSpareController {
         }
 
         PCRepair pcRepair = pcRepairService.findByControlNum(pcSpare.getControlNumber());
-//        pcRepair.setDateRepairEnd(pcSpare.getDate());
-//        pcRepair.setRepairedBy(pcSpare.getRepairedBy());
-
         System.out.println("Date Withdrawn: " + pcSpare.getDateWithdrawn());
 
         // for withdrawals

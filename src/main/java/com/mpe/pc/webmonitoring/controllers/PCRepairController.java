@@ -58,6 +58,7 @@ public class PCRepairController {
         Page<PCRepair> pcRepairList = pcRepairService.getAllRecords(pageable);
         Long total = pcRepairList.getTotalElements();
 
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("page", pcRepairList);
         model.addAttribute("size", total);
         return "pc-repair-table";
@@ -141,6 +142,9 @@ public class PCRepairController {
             model.addAttribute("noRecord", "The PC has no repair records...");
             model.addAttribute("pcRepair", new PCRepair());
         } else {
+            if(pcRepair.getNgOccurrence() >= 2){
+                model.addAttribute("occurrenceAlert", "ALERT! NG Occurrence : " + pcRepair.getNgOccurrence() + ", PC is for Disposal...");
+            }
             model.addAttribute("pcRepair", pcRepair);
         }
 

@@ -46,8 +46,16 @@
                     </td>
                     <td colspan="4">
                         <ul class="pagination custom-pagination-tfoot">
-                            <li><a href="<spring:url value="/pcSpare/loadTable?page=${pcSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>
-                            <li><a href="<spring:url value="/pcSpare/loadTable?page=${pcSparePage.number + 1}"/>&sort=${sort}">Next</a></li>
+                            <c:choose>
+                                <c:when test="${pcSparePage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                            </c:choose>
+                            <c:choose>
+                                <c:when test="${pcSparePage.last}"><li><a class="last-page">Next</a></li></c:when>
+                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                            </c:choose>
+                            <%--<li><a href="<spring:url value="/pcSpare/loadTable?page=${pcSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>--%>
+                            <%--<li><a href="<spring:url value="/pcSpare/loadTable?page=${pcSparePage.number + 1}"/>&sort=${sort}">Next</a></li>--%>
                             <li><a href="downloadSpares">Export to Excel</a> </li>
                         </ul>
                     </td>

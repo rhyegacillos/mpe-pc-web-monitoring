@@ -59,6 +59,7 @@ public class PcEndorsementController {
         Page<PcEndorse> pcEndorsePage = pcEndorsementService.getAllPcEndorseRecords(pageable);
         Long pcEndorseTotal = pcEndorsePage.getTotalElements();
 
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("pcEndorsePage", pcEndorsePage);
         model.addAttribute("pcEndorseTotal", pcEndorseTotal);
 

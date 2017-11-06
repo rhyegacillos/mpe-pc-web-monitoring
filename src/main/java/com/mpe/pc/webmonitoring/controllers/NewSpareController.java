@@ -46,6 +46,7 @@ public class NewSpareController {
 
         Page<NewSparePC> newSparePage = pcSpareService.newSpareRecords(1,pageable);
         Long newSparesTotal = newSparePage.getTotalElements();
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("newSparePage", newSparePage);
         model.addAttribute("newSparesTotal", newSparesTotal);
 
@@ -57,6 +58,7 @@ public class NewSpareController {
 
         Page<NewSparePC> newSparePage = pcSpareService.newSpareRecords(0,pageable);
         Long newSparesTotal = newSparePage.getTotalElements();
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("newSparePage", newSparePage);
         model.addAttribute("newSparesTotal", newSparesTotal);
 

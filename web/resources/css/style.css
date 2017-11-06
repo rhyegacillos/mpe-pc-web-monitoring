@@ -399,6 +399,9 @@ form label {
     color: rgba(82, 15, 45, 0.9);
 }
 
+.custom-pagination-tfoot>li>a.first-page {
+}
+
 .custom-pagination-tfoot>li:first-child>a, .custom-pagination-tfoot>li:last-child>a  {
     border-radius: 0;
 }

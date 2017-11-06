@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container">
     <div class="main-wrapper">
         <div class="title-main">
@@ -22,6 +23,7 @@
                 </div>
                 <div class="form-group text-center">
                     <label class="error">${noRecord}</label>
+                    <label class="error">${occurrenceAlert}</label>
                 </div>
             </div>
         </form>
@@ -176,6 +178,7 @@
                                 <form:input path="ngOccurrence" cssClass="form-control form-input"/>
                                 <span class="input-group-addon fa-icon"><i class="fa fa-wrench"></i></span>
                             </div>
+                            <%--<form:errors path="ngOccurrence" cssClass="error"/>--%>
                         </div>
                         <div class="form-group col-md-4 col-md-offset-2">
                             <label>Remarks</label>

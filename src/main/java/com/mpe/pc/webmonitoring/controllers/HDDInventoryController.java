@@ -108,12 +108,9 @@ public class HDDInventoryController {
 
     @GetMapping("hddTable")
     public String hddTable(Model model, Pageable pageable, Sort sort){
-        //String searchSelected = searchItem;
         Page<Hdd> hddPage = hddService.getAllHddRecords(1,pageable);
         Long totalHdd = hddPage.getTotalElements();
-        HDDList hddPages = new HDDList();
-        hddPages.setHddPage(hddPage);
-
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("hddPage", hddPage);
         model.addAttribute("totalHdd", totalHdd);
 
@@ -122,12 +119,9 @@ public class HDDInventoryController {
 
     @GetMapping("withdrawalTable")
     public String withdrawalTable(Model model, Pageable pageable, Sort sort){
-        //String searchSelected = searchItem;
         Page<Hdd> hddPage = hddService.getAllHddRecords(0,pageable);
         Long totalHdd = hddPage.getTotalElements();
-        HDDList hddPages = new HDDList();
-        hddPages.setHddPage(hddPage);
-
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("hddPage", hddPage);
         model.addAttribute("totalHdd", totalHdd);
 
@@ -161,7 +155,6 @@ public class HDDInventoryController {
         hddService.deleteHdd(hdd);
         return "redirect:/hdd/withdrawalTable";
     }
-
 
     @ModelAttribute
     public void loginDetails(Model model, final RedirectAttributes redirectAttributes) {

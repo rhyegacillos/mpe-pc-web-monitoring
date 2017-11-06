@@ -7,11 +7,3 @@ function checkSubmit(e) {
         document.forms[0].submit();
     }
 }
-
-// $(document).ready(function() {
-//     $('.table-search').DataTable( {
-//         "paging":   false,
-//         "ordering": false,
-//         "info":     false
-//     } );
-// } );

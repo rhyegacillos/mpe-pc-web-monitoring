@@ -74,6 +74,7 @@ public class NgPcPartsInventoryController {
         Page<NgPcParts> ngPcPartsPage = ngPcPartsService.getAllNgPartsRecords(pageable);
         Long totalNgPcParts = ngPcPartsPage.getTotalElements();
 
+        model.addAttribute("sort", (sort != null) ? sort.iterator().next().getProperty() : "");
         model.addAttribute("ngPcPartsPage", ngPcPartsPage);
         model.addAttribute("totalNgPcParts", totalNgPcParts);
 

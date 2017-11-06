@@ -58,8 +58,14 @@
                 </td>
                 <td colspan="13">
                     <ul class="pagination custom-pagination-tfoot">
-                        <li><a href="<spring:url value="ngPcPartsTable?page=${ngPcPartsPage.number - 1}&sort=${sort}"/>">Previous</a></li>
-                        <li><a href="<spring:url value="ngPcPartsTable?page=${ngPcPartsPage.number + 1}&&sort=${sort}"/>">Next</a></li>
+                        <c:choose>
+                            <c:when test="${ngPcPartsPage.first}"><li><a class="first-page">Previous</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="ngPcPartsTable?page=${ngPcPartsPage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${ngPcPartsPage.last}"><li><a class="last-page">Next</a></li></c:when>
+                            <c:otherwise><li><a href="<spring:url value="ngPcPartsTable?page=${ngPcPartsPage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                        </c:choose>
                         <li><a href="download">Export to Excel</a> </li>
                     </ul>
                 </td>
