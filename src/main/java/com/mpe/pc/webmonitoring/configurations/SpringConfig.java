@@ -19,6 +19,7 @@ import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -89,4 +90,10 @@ public class SpringConfig extends WebMvcConfigurerAdapter {
         messageSource.setBasename("messages");
         return messageSource;
     }
+
+    @Bean(initMethod="start",destroyMethod="stop")
+    public org.h2.tools.Server h2WebConsoleServer () throws SQLException {
+        return org.h2.tools.Server.createWebServer("-web","-webAllowOthers","-webDaemon","-webPort", "8082");
+    }
+
 }

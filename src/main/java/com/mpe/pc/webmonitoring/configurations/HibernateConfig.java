@@ -9,6 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -24,7 +25,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource("classpath:jdbc.properties")
+@PropertySource("classpath:h2-jdbc.properties")
 @EnableJpaRepositories("com.mpe.pc.webmonitoring.repositories")
 public class HibernateConfig {
     @Autowired
@@ -41,9 +42,20 @@ public class HibernateConfig {
 //        return sessionFactory;
 //    }
 
+//    @Bean
+//    public DataSource dataSource() {
+//        BasicDataSource dataSource = new BasicDataSource();
+//        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+//        dataSource.setUrl(env.getProperty("jdbc.url"));
+//        dataSource.setUsername(env.getProperty("jdbc.user"));
+//        dataSource.setPassword(env.getProperty("jdbc.pass"));
+//
+//        return dataSource;
+//    }
+
     @Bean
     public DataSource dataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
         dataSource.setUrl(env.getProperty("jdbc.url"));
         dataSource.setUsername(env.getProperty("jdbc.user"));

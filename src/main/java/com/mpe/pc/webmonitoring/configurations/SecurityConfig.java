@@ -28,7 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication().dataSource(dataSource);
+        //auth.jdbcAuthentication().dataSource(dataSource);
+        auth.inMemoryAuthentication().withUser("rhye").password("password").roles("USER","ADMIN");
     }
 
     @Override
@@ -45,6 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/static/**", "/webjars/**").permitAll()
+                .antMatchers("/").permitAll()
                 .antMatchers("/user/showForm").access("hasRole('ROLE_ADMIN')")
                 .antMatchers("/user/loadTable").access("hasRole('ROLE_ADMIN')");
         http.authorizeRequests()
