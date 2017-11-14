@@ -15,49 +15,49 @@
         <table class="table main-table table-search">
             <thead>
             <tr>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=controlNumber"/>" class="th-link">Control
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=controlNumber,desc"/>" class="th-link">Control
                     Number</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=mac"/>" class="th-link">MAC
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=mac,desc"/>" class="th-link">MAC
                     Address</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=mobo"/>" class="th-link">MOBO</a>
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=mobo,desc"/>" class="th-link">MOBO</a>
                 </th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=pmDate"/>" class="th-link">PM
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=pmDate,desc"/>" class="th-link">PM
                     Date</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=station"/>"
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=station,desc"/>"
                        class="th-link">Station</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=pcName"/>" class="th-link">PC
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=pcName,desc"/>" class="th-link">PC
                     Name</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=ngDescription"/>" class="th-link">NG
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=ngDescription,desc"/>" class="th-link">NG
                     Description</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=finding"/>"
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=finding,desc"/>"
                        class="th-link">Finding</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=weakComponent"/>" class="th-link">Weak
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=weakComponent,desc"/>" class="th-link">Weak
                     Component</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=actionTaken"/>" class="th-link">Action
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=actionTaken,desc"/>" class="th-link">Action
                     Taken</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=hddInstalled"/>" class="th-link">HDD
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=hddInstalled,desc"/>" class="th-link">HDD
                     Installed</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=hddOrientation"/>" class="th-link">HDD
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=hddOrientation,desc"/>" class="th-link">HDD
                     Orientation</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=source"/>"
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=source,desc"/>"
                        class="th-link">Source</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=month"/>" class="th-link">Month</a>
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=month,desc"/>" class="th-link">Month</a>
                 </th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=changeFan"/>" class="th-link">Change
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=changeFan,desc"/>" class="th-link">Change
                     Fan</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=removedIntakeFan"/>"
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=removedIntakeFan,desc"/>"
                        class="th-link">Remove Intake Fan</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=ngOccurrence"/>" class="th-link">NG
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=ngOccurrence,desc"/>" class="th-link">NG
                     Occurrence</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=remarks"/>"
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=remarks,desc"/>"
                        class="th-link">Remarks</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=dateRepairStart"/>" class="th-link">Date
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=dateRepairStart,desc"/>" class="th-link">Date
                     Repair Start</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=dateRepairEnd"/>" class="th-link">Date
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=dateRepairEnd,desc"/>" class="th-link">Date
                     Repair End</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=repairedBy"/>" class="th-link">Repaired
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=repairedBy,desc"/>" class="th-link">Repaired
                     By</a></th>
-                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=dateEndorsed"/>" class="th-link">Date
+                <th><a href="<spring:url value="/pcRepair/pcRepairTable?page=0&sort=dateEndorsed,desc"/>" class="th-link">Date
                     Endorsed</a></th>
                 <th>ACTION</th>
             </tr>
@@ -102,11 +102,11 @@
         <ul class="pagination custom-pagination">
             <c:choose>
                 <c:when test="${page.first}"><li><a class="first-page">Previous</a></li></c:when>
-                <c:otherwise><li><a href="<spring:url value="pcRepairTable?page=${page.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                <c:otherwise><li><a href="<spring:url value="pcRepairTable?page=${page.number - 1}&sort=${sort},desc"/>">Previous</a></li></c:otherwise>
             </c:choose>
             <c:choose>
                 <c:when test="${page.last}"><li><a class="last-page">Next</a></li></c:when>
-                <c:otherwise><li><a href="<spring:url value="pcRepairTable?page=${page.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                <c:otherwise><li><a href="<spring:url value="pcRepairTable?page=${page.number + 1}&sort=${sort},desc"/>">Next</a></li></c:otherwise>
             </c:choose>
             <%--<li><a href="<spring:url value="/pcRepair/pcRepairTable?page=${page.number - 1}&sort=${sort}"/>">Previous</a></li>--%>
             <%--<li><a href="<spring:url value="/pcRepair/pcRepairTable?page=${page.number + 1}&&sort=${sort}"/>">Next</a></li>--%>

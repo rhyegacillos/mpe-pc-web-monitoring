@@ -15,14 +15,14 @@
         <table class="table main-table table-search">
             <thead>
             <tr>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=controlNo"/>" class="th-link">HDD Control Number</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=dateEndorsed"/>" class="th-link">Date Endorsed</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=line"/>" class="th-link">Line</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=process"/>" class="th-link">Process</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=ngCode"/>" class="th-link">NG Code</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=source"/>" class="th-link">Source</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=endorsedBy"/>" class="th-link">Endorsed By</a></th>
-                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=remarks"/>" class="th-link">Remarks</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=controlNo,desc"/>" class="th-link">HDD Control Number</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=dateEndorsed,desc"/>" class="th-link">Date Endorsed</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=line,desc"/>" class="th-link">Line</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=process,desc"/>" class="th-link">Process</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=ngCode,desc"/>" class="th-link">NG Code</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=source,desc"/>" class="th-link">Source</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=endorsedBy,desc"/>" class="th-link">Endorsed By</a></th>
+                <th><a href="<spring:url value="pcEndorsementTable?page=0&sort=remarks,desc"/>" class="th-link">Remarks</a></th>
                 <th>ACTION</th>
             </tr>
             </thead>
@@ -52,11 +52,11 @@
         <ul class="pagination custom-pagination">
             <c:choose>
                 <c:when test="${pcEndorsePage.first}"><li><a class="first-page">Previous</a></li></c:when>
-                <c:otherwise><li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                <c:otherwise><li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number - 1}&sort=${sort},desc"/>">Previous</a></li></c:otherwise>
             </c:choose>
             <c:choose>
                 <c:when test="${pcEndorsePage.last}"><li><a class="last-page">Next</a></li></c:when>
-                <c:otherwise><li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                <c:otherwise><li><a href="<spring:url value="pcEndorsementTable?page=${pcEndorsePage.number + 1}&sort=${sort},desc"/>">Next</a></li></c:otherwise>
             </c:choose>
             <li><a href="download">Export to Excel</a> </li>
         </ul>

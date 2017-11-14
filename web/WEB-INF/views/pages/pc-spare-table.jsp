@@ -24,10 +24,10 @@
         <div class="table-responsive">
             <table class="table main-table">
                 <thead>
-                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=controlNumber"/>" class="th-link">Control Number</a></th>
-                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=date"/>" class="th-link">Date Repaired</a></th>
-                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=repairedBy"/>" class="th-link">Repaired By</a></th>
-                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=location"/>" class="th-link">Location</a></th>
+                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=controlNumber,desc"/>" class="th-link">Control Number</a></th>
+                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=date,desc"/>" class="th-link">Date Repaired</a></th>
+                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=repairedBy,desc"/>" class="th-link">Repaired By</a></th>
+                <th><a href="<spring:url value="/pcSpare/loadTable?page=0&sort=location,desc"/>" class="th-link">Location</a></th>
                 </thead>
                 <tbody>
                 <c:forEach items="${pcSparePage.content}" var="pcSpare">
@@ -48,11 +48,11 @@
                         <ul class="pagination custom-pagination-tfoot">
                             <c:choose>
                                 <c:when test="${pcSparePage.first}"><li><a class="first-page">Previous</a></li></c:when>
-                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number - 1}&sort=${sort}"/>">Previous</a></li></c:otherwise>
+                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number - 1}&sort=${sort},desc"/>">Previous</a></li></c:otherwise>
                             </c:choose>
                             <c:choose>
                                 <c:when test="${pcSparePage.last}"><li><a class="last-page">Next</a></li></c:when>
-                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number + 1}&sort=${sort}"/>">Next</a></li></c:otherwise>
+                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number + 1}&sort=${sort},desc"/>">Next</a></li></c:otherwise>
                             </c:choose>
                             <%--<li><a href="<spring:url value="/pcSpare/loadTable?page=${pcSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>--%>
                             <%--<li><a href="<spring:url value="/pcSpare/loadTable?page=${pcSparePage.number + 1}"/>&sort=${sort}">Next</a></li>--%>
