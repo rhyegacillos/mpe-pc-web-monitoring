@@ -2,6 +2,7 @@ package com.mpe.pc.webmonitoring.services;
 
 import com.mpe.pc.webmonitoring.domains.Hdd;
 import com.mpe.pc.webmonitoring.repositories.HddRepository;
+import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
@@ -49,10 +51,19 @@ public class HddServiceImplTest {
 //
 //    }
 
-//    @Test
-//    @Ignore
-//    public void saveHdd() throws Exception {
-//    }
+    @Test
+    public void saveHdd_test() throws Exception {
+        Hdd hdd = new Hdd();
+        hdd.setModuleNo(MODULE_NO);
+
+        when(hddRepository.save(any(Hdd.class))).thenReturn(hdd);
+
+        //Hdd getHdd = hddRepository.findOne(MODULE_NO);
+
+        assertNotNull(hddRepository.findOne(MODULE_NO));
+
+        verify(hddRepository, times(1)).save(any(Hdd.class));
+    }
 
     @Test
     public void getHdd() throws Exception {

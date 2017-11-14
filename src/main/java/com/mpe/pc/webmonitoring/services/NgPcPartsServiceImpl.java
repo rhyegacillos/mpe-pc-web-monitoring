@@ -31,7 +31,6 @@ public class NgPcPartsServiceImpl implements NgPcPartsService {
         } else {
             NgPcParts ngPcPartsTemp = ngPcPartsRepository.findOne(ngPcParts.getId());
 
-            //ngPcPartsTemp.setId(ngPcParts.getId());
             ngPcPartsTemp.setBrand(ngPcParts.getBrand());
             ngPcPartsTemp.setDateDefect(ngPcParts.getDateDefect());
             ngPcPartsTemp.setDatePurchased(ngPcParts.getDatePurchased());
