@@ -2,25 +2,19 @@ package com.mpe.pc.webmonitoring.services;
 
 import com.mpe.pc.webmonitoring.domains.Hdd;
 import com.mpe.pc.webmonitoring.repositories.HddRepository;
-import com.mpe.pc.webmonitoring.services.HddServiceImpl;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
-import static org.mockito.Matchers.notNull;
 import static org.mockito.Mockito.*;
 
 public class HddServiceImplTest {
@@ -75,13 +69,26 @@ public class HddServiceImplTest {
         verify(hddRepository, never()).findAll();
     }
 
-//    @Test
-//    @Ignore
-//    public void getHddList() throws Exception {
-//    }
-//
     @Test
-    @Ignore
+    public void getHddList() throws Exception {
+        Hdd hdd = new Hdd();
+        hdd.setModuleNo(MODULE_NO);
+        hdd.setFlag(1);
+        List<Hdd> hddList = new ArrayList<>();
+        hddList.add(hdd);
+
+        when(hddService.getHddList(1)).thenReturn(hddList);
+
+        List<Hdd> hddListWithFlagOne = hddRepository.findByFlag(1);
+        List<Hdd> hddListWihtFlagZero = hddRepository.findByFlag(0);
+
+        assertEquals(hddListWithFlagOne.size(), 1);
+        assertEquals(hddListWihtFlagZero.size(), 0);
+        verify(hddRepository, times(1)).findByFlag(1);
+        verify(hddRepository, times(1)).findByFlag(0);
+    }
+
+    @Test
     public void deleteHdd() throws Exception {
         Hdd hdd = new Hdd();
         hdd.setModuleNo(MODULE_NO);
