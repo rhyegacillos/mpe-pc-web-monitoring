@@ -21,13 +21,8 @@ public class HddServiceImpl implements HddService {
 
     @Override
     public Page<Hdd> getAllHddRecords(int flag, Pageable pageable) {
-        //String dateWithdrawnEmpty = "";
-//        if(searchItem.equals("SPARE"))
-//            return hddRepository.findByDateWithdrawnIsNull(pageable);
-//        else if(searchItem.equals("WITHDRAW"))
-//            return hddRepository.findByDateWithdrawnIsNotNull(pageable);
-//        else
-            return hddRepository.findByFlag(flag, pageable);
+
+        return hddRepository.findByFlag(flag, pageable);
     }
 
     @Override
