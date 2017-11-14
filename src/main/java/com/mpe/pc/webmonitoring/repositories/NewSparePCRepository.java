@@ -9,10 +9,6 @@ import java.util.List;
 
 public interface NewSparePCRepository extends JpaRepository<NewSparePC, String> {
 
-//    List<NewSparePC> getAllRecords();
-//    NewSparePC findByControlNum(String controlNum);
-//    void addNewSparePC(NewSparePC newSparePC);
-
     Page<NewSparePC> findByFlag(int flag, Pageable pageable);
     List<NewSparePC> findByFlag(int flag);
 

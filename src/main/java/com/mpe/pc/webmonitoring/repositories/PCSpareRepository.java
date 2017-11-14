@@ -11,10 +11,6 @@ import java.util.List;
 
 public interface PCSpareRepository extends JpaRepository<PCSpare, String> {
 
-//    List<PCSpare> pcSpareOptional();
-//    PCSpare getSparePC(String controlNum);
-//    void deleteSparePC(String controlNum);
-//    void addSparePC(PCSpare pcSpare);
     Page<PCSpare> findByFlag(int flag, Pageable pageable);
     List<PCSpare> findByFlag(int flag);
 
