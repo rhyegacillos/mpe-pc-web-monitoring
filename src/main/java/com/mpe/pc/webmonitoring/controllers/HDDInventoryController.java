@@ -71,7 +71,6 @@ public class HDDInventoryController {
             return "hdd-form";
         }
 
-
         if(hdd.getDateWithdrawn() == null)
             hdd.setFlag(1);
         else {

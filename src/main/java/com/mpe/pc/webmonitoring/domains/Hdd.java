@@ -3,6 +3,7 @@ package com.mpe.pc.webmonitoring.domains;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 @Entity(name = "hdd_inventory")
 public class Hdd {
 
