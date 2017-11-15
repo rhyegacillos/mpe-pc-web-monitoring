@@ -1,12 +1,9 @@
 package com.mpe.pc.webmonitoring.services;
 
-import com.mpe.pc.webmonitoring.domains.HDDList;
 import com.mpe.pc.webmonitoring.domains.Hdd;
 import com.mpe.pc.webmonitoring.repositories.HddRepository;
-import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.data.domain.Page;
@@ -16,7 +13,8 @@ import org.springframework.data.domain.Pageable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
