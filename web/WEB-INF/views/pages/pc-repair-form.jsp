@@ -162,6 +162,7 @@
                                 <form:input path="changeFan" cssClass="form-control form-input"/>
                                 <span class="input-group-addon fa-icon"><i class="fa fa-wrench"></i></span>
                             </div>
+                            <form:errors path="changeFan" cssClass="error"/>
                         </div>
                         <div class="form-group col-md-4 col-md-offset-2">
                             <label>Remove Intake Fan</label>
@@ -169,6 +170,7 @@
                                 <form:input path="removedIntakeFan" cssClass="form-control form-input"/>
                                 <span class="input-group-addon fa-icon"><i class="fa fa-wrench"></i></span>
                             </div>
+                            <form:errors path="removedIntakeFan" cssClass="error"/>
                         </div>
                     </div>
                     <div class="row">
@@ -178,7 +180,7 @@
                                 <form:input path="ngOccurrence" cssClass="form-control form-input"/>
                                 <span class="input-group-addon fa-icon"><i class="fa fa-wrench"></i></span>
                             </div>
-                            <%--<form:errors path="ngOccurrence" cssClass="error"/>--%>
+                            <form:errors path="ngOccurrence" cssClass="error"/>
                         </div>
                         <div class="form-group col-md-4 col-md-offset-2">
                             <label>Remarks</label>

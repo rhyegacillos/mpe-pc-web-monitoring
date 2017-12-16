@@ -1,101 +1,128 @@
-.navbar-inverse {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 0;
-    border: 2px solid #120f0f;
-}
 
-.nav>li>a {
-    padding: 15px 7px;
-}
+#tip-logo {
+    position: absolute;
+    left: 10px;
+    top: 5px;
 
-.navbar-inverse .navbar-nav>li>a{
-    color: rgba(7, 255, 223, 0.86);
-    font-weight: bold;
-    margin: 0 1px;
-    font-size: 15px;
-    height: 28px;
-    padding: 10px ;
-    text-transform: uppercase;
-    transition: .7s;
 }
-
-.navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: rgba(5,4,0,0.02);
-}
-
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
-    /*background-color: #269abc;*/
-    color: #ffffcc;
-    /*height: 18px;*/
-    /*text-decoration: none;*/
-    /*padding: 10px;*/
-    /*!*margin-top: 10px;*!*/
-}
-
-a#mpe-logo.navbar-right {
-    padding-left: 15px;
-    /*margin-left: 20px;*/
-    height: 25px;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
 
 .navbar {
-    padding: 5px 0;
-    font-size: 20px;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #120f0f;
+    min-height: 0;
+    padding: 2px 0;
 }
 
-.navbar-inverse .navbar-brand {
-    font-size: 22px;
+.navbar-brand {
+    color: #FFF;
+}
+
+ul#menu {
+    padding-right: 0;
+}
+
+.navbar-toggle {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(7, 255, 223, 0.86);
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: rgba(7, 255, 223, 0.86);
+}
+
+.navbar-nav li a, #logout-web {
+    color: rgba(7, 255, 223, 0.86);
+    padding: 3px;
+    margin: 5px 10px;
     font-weight: bold;
-    color: rgb(247, 182, 86);
     text-transform: uppercase;
-    padding-top: 15px;
-    border: none;
     letter-spacing: 1px;
-
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: all .5s ease;
 }
 
-.navbar-header .navbar-brand:hover {
-    color: #FFC107;
+.navbar-nav li:nth-child(7) {
+    margin-left: 200px;
+}
+
+ul.dropdown-menu li a, #logout-web {
+    margin-left: 0;
+}
+
+.navbar-nav li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    border: 2px solid gold;
+    color: #ffcc33;
+}
+
+ul.dropdown-menu li a:hover {
+    background-color: gold;
+    padding: 3px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+input#logout-web:hover {
+    background-color: gold;
+    padding: 3px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.dropdown-menu .divider {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.nav .open>a:focus,
+.nav .open>a:visited {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    border: 2px solid gold;
+    color: #ffcc33;
+}
+
+a.dropdown-toggle {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    border: 2px solid gold;
+    color: #ffcc33;
+}
+
+.navbar-header a {
+    font-size: 35px;
+    margin-right: 40px;
+}
+
+.head-title {
+    background: rgba(0, 0, 0, 0.9);
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    font-size: 25px;
+    padding: 5px 0 10px 0;
+    text-align: center;
+    font-weight: bolder;
+    /*        color: rgb(247, 182, 86);*/
+    /*        color: linear-gradient(to top, #ffb347, #ffcc33);*/
+    color: #ffb347;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
 }
 
 ul.dropdown-menu {
-    background-color: rgba(27,25,25,0.9);
-
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-ul.dropdown-menu >li>a, input[type='submit'].btn-link {
-
-    color: white;
+#logout-web {
     text-align: center;
-    text-decoration: none;
-    width: 100%;
-    transition: all .5s ease;
-    padding: 5px 20px;
-    font-weight: 500;
-    font-size: 15px;
-}
-
-ul.dropdown-menu >li>a:hover, input[type='submit'].btn-link:hover {
-    background-color: rgba(18, 217, 96, 0.6);
-    color: white;
-    font-weight: 500;
+    width: 175px;
 }
 
 
-
-/*footer {
-    margin-top: 30px;
-    color: white;
-    background-color:
-    padding: 10px 0;
-    letter-spacing: 2px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}*/
 
 
 
@@ -143,13 +170,15 @@ body {
 /* login page */
 
 .nav-login .navbar-header .navbar-brand {
-    color: rgba(0, 188, 212, 0.7);
+    color: rgba(0, 212, 236, 0.66);
     font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
     transition: all .5s ease;
 }
 
 .nav-login .navbar-header .navbar-brand:hover {
-    color: rgb(0, 188, 212);
+    color: rgba(237, 188, 47, 0.84);
 }
 
 .login-wrapper {
@@ -541,7 +570,7 @@ h3 {
     font-weight: bold;
     border-radius: 0;
     letter-spacing: 1px;
-    border: 2px solid rgba(201, 76, 76, 0.8);
+    border: 3px solid rgba(201, 76, 76, 0.6);
     margin-bottom: 10px;
     transition: 0.5s;
 
@@ -553,8 +582,8 @@ h3 {
 }
 
 .btn-back-link:hover {
-    background-color: rgba(201, 76, 76, 0.9);
-    color: rgba(224, 226, 228, 0.8);
-    border: 2px solid rgba(201, 76, 76, 1);
+    background-color: rgba(201, 76, 76, 0.8);
+    color: rgba(245, 255, 242, 0.75);
+    border: 3px solid rgb(201, 52, 22);
 }
 

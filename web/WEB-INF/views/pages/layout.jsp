@@ -9,8 +9,8 @@
         <tiles:insertAttribute name="title" />
     </title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/jquery-ui/1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/style.css">
 
 </head>

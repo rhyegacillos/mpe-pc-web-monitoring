@@ -9,6 +9,25 @@
         <div class="title-underline"></div>
     </div>
 
+    <form id="formSearch" method="get" action="searchSparePC">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="input-group">
+                        <input name="controlNum" class="form-input form-control"
+                               placeholder="Search HDD Control No.">
+                        <span class="input-group-addon fa-icon"><i class="fa fa-search"
+                                                                   onkeypress="return checkSubmit(event)"
+                                                                   onclick="document.getElementById('formSearch').submit()"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <label class="error">${noRecord}</label>
+        </div>
+    </form>
+
     <div class="title-underline-long"></div>
 
     <%--@elvariable id="newSparePC" type="com.mpe.pc.webmonitoring.domains.NewSparePC"--%>

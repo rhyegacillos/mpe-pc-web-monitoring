@@ -19,4 +19,5 @@ public interface PCSpareService {
     NewSparePC getNewSparePC(String controlNum);
     void addNewSparePC(NewSparePC newSparePC);
     void deleteNewSparePc(NewSparePC newSparePC);
+
 }

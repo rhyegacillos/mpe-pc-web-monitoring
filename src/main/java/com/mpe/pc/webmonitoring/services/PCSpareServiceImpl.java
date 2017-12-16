@@ -58,7 +58,7 @@ public class PCSpareServiceImpl implements PCSpareService {
     }
 
     public NewSparePC getNewSparePC(String controlNum) {
-        return newSparePCRepository.findOne(controlNum);
+        return newSparePCRepository.findByControlNum(controlNum);
     }
 
     public void addNewSparePC(NewSparePC newSparePC) {

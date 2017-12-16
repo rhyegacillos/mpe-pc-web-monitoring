@@ -21,28 +21,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
-//    @Autowired
-//    public void setDataSource(DataSource dataSource){
-//        this.dataSource = dataSource;
-//    }
-
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        //auth.jdbcAuthentication().dataSource(dataSource);
+ //       auth.jdbcAuthentication().dataSource(dataSource);
         auth.inMemoryAuthentication().withUser("rhye").password("password").roles("USER","ADMIN");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-//        http.authorizeRequests()
-//                .antMatchers("/files/**").permitAll()
-//                .antMatchers("/403").denyAll()
-//                .antMatchers("/admin").access("hasRole('ROLE_ADMIN')")
-//                .antMatchers("/addEmployeeForm").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
-//                .antMatchers("/listUsers").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
-//                .antMatchers("/user").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')");
-
 
         http.authorizeRequests()
                 .antMatchers("/static/**", "/webjars/**").permitAll()

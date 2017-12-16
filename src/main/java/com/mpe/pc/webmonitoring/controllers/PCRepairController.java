@@ -78,20 +78,21 @@ public class PCRepairController {
         if(pcRepair.getDateEndorsed().equals("")) {
             pcRepair.setDateEndorsed(null);
         } else {
-            if(pcRepair.getDateRepairStart().equals("")) {
-                result.rejectValue("dateRepairStart", "Empty.dateRepairStart");
+            if(pcRepair.getDateRepairEnd().equals("")) {
+                result.rejectValue("dateRepairEnd", "Empty.dateRepairEnd");
                 return "pc-repair-form";
             }
         }
 
         if(pcRepair.getDateRepairStart().equals("")) {
             pcRepair.setDateRepairStart(null);
-        } else {
-            if(pcRepair.getDateRepairEnd().equals("")) {
-                result.rejectValue("dateRepairEnd", "Empty.dateRepairEnd");
-                return "pc-repair-form";
-            }
         }
+//        else {
+//            if(pcRepair.getDateRepairEnd().equals("")) {
+//                result.rejectValue("dateRepairEnd", "Empty.dateRepairEnd");
+//                return "pc-repair-form";
+//            }
+//        }
 
         if(pcRepair.getDateRepairEnd().equals("")) {
             pcRepair.setDateRepairEnd(null);

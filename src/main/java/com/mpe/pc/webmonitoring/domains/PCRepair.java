@@ -1,6 +1,7 @@
 package com.mpe.pc.webmonitoring.domains;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -63,12 +64,15 @@ public class PCRepair {
     @Column(name = "remarks")
     private String remarks;
 
+    @Range(min = 0, max = 1, message = "The input value is incorrect, must be 1 or 0")
     @Column(name = "change_fan")
     private int changeFan;
 
+    @Range(min = 0, max = 1, message = "The input value is incorrect, must be 1 or 0")
     @Column(name = "removed_intake_fan")
     private int removedIntakeFan;
 
+    @Range(min = 0, max = 3, message = "The input value is incorrect, must be 0 to 3")
     @Column(name = "ng_occurrence")
     private int ngOccurrence;
 

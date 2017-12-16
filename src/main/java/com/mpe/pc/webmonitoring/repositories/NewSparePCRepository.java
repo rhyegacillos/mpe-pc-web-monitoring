@@ -11,5 +11,6 @@ public interface NewSparePCRepository extends JpaRepository<NewSparePC, String> 
 
     Page<NewSparePC> findByFlag(int flag, Pageable pageable);
     List<NewSparePC> findByFlag(int flag);
+    NewSparePC findByControlNum(String controlNum);
 
 }

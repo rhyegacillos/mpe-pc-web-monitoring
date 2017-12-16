@@ -36,9 +36,23 @@ public class NewSpareController {
     @GetMapping("showForm")
     public String showForm(Model model, @ModelAttribute("newSparePC") NewSparePC newSparePC) {
 
-        model.addAttribute("newSparePC", new NewSparePC());
+        if(newSparePC == null) {
+            model.addAttribute("newSparePC", new NewSparePC());
+            model.addAttribute("noRecord", "No Record Found!..");
+        } else {
+            model.addAttribute("newSparePC", newSparePC);
+        }
 
         return "new-spare";
+    }
+
+    @GetMapping("searchSparePC")
+    public String searchControlNo(@RequestParam("controlNum")String controlNo, final RedirectAttributes redirectAttributes){
+
+        NewSparePC newSparePC = pcSpareService.getNewSparePC(controlNo);
+        redirectAttributes.addFlashAttribute("newSparePC", newSparePC);
+
+        return "redirect:/newSpare/showForm";
     }
 
     @GetMapping("loadTable")
