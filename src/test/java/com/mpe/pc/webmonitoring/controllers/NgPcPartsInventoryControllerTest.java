@@ -15,20 +15,20 @@ import static org.junit.Assert.*;
 
 public class NgPcPartsInventoryControllerTest {
 
-    @Autowired
-    private WebApplicationContext webApplicationContext;
+//    @Autowired
+//    private WebApplicationContext webApplicationContext;
+//
+//    private MockMvc mockMvc;
 
-    private MockMvc mockMvc;
-
-    @Before
-    public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
-        mockMvc = MockMvcBuilders
-                    .webAppContextSetup(webApplicationContext)
-                    .apply(SecurityMockMvcConfigurers.springSecurity())
-                    .build();
-
-    }
+//    @Before
+//    public void setUp() throws Exception {
+//        MockitoAnnotations.initMocks(this);
+//        mockMvc = MockMvcBuilders
+//                    .webAppContextSetup(webApplicationContext)
+//                    .apply(SecurityMockMvcConfigurers.springSecurity())
+//                    .build();
+//
+//    }
 
     @Test
     public void showForm() throws Exception {
