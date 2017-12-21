@@ -43,17 +43,17 @@
                 <tfoot>
                 <tr>
                     <td colspan="2">
-                        Total: ${pcSparesTotal}
+                        <span>Total: ${pcSparesTotal}</span> | <span> Page ${pcSparePage.number + 1} of ${pcSparePage.totalPages} </span>
                     </td>
                     <td colspan="5">
                         <ul class="pagination custom-pagination-tfoot">
                             <c:choose>
                                 <c:when test="${pcSparePage.first}"><li><a class="first-page">Previous</a></li></c:when>
-                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number - 1}&sort=${sort},desc"/>">Previous</a></li></c:otherwise>
+                                <c:otherwise><li><a href="<spring:url value="withdrawalTable?page=${pcSparePage.number - 1}&sort=${sort},desc"/>">Previous</a></li></c:otherwise>
                             </c:choose>
                             <c:choose>
                                 <c:when test="${pcSparePage.last}"><li><a class="last-page">Next</a></li></c:when>
-                                <c:otherwise><li><a href="<spring:url value="loadTable?page=${pcSparePage.number + 1}&sort=${sort},desc"/>">Next</a></li></c:otherwise>
+                                <c:otherwise><li><a href="<spring:url value="withdrawalTable?page=${pcSparePage.number + 1}&sort=${sort},desc"/>">Next</a></li></c:otherwise>
                             </c:choose>
                             <%--<li><a href="<spring:url value="/pcSpare/withdrawalTable?page=${pcSparePage.number - 1}&sort=${sort}"/>">Previous</a></li>--%>
                             <%--<li><a href="<spring:url value="/pcSpare/withdrawalTable?page=${pcSparePage.number + 1}"/>&sort=${sort}">Next</a></li>--%>

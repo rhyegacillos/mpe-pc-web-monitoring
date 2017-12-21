@@ -53,10 +53,10 @@
             </tbody>
             <tfoot>
             <tr>
-                <td colspan="2">
-                    Total: ${totalNgPcParts}
+                <td colspan="5">
+                    <span>Total: ${totalNgPcParts}</span> | <span> Page ${ngPcPartsPage.number + 1} of ${ngPcPartsPage.totalPages}
                 </td>
-                <td colspan="13">
+                <td colspan="10">
                     <ul class="pagination custom-pagination-tfoot">
                         <c:choose>
                             <c:when test="${ngPcPartsPage.first}"><li><a class="first-page">Previous</a></li></c:when>

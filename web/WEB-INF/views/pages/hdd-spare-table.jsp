@@ -40,10 +40,10 @@
             </tbody>
             <tfoot>
             <tr>
-                <td colspan="1">
-                    Total: ${totalHdd}
+                <td colspan="2">
+                    <span>Total: ${totalHdd}</span> | <span> Page ${hddPage.number + 1} of ${hddPage.totalPages}
                 </td>
-                <td colspan="4">
+                <td colspan="3">
                     <ul class="pagination custom-pagination-tfoot">
                         <c:choose>
                             <c:when test="${hddPage.first}"><li><a class="first-page">Previous</a></li></c:when>

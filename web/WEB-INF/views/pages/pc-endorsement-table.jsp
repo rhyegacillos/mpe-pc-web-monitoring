@@ -44,7 +44,7 @@
             <tfoot>
                 <tr>
                     <td colspan="22">
-                        Total: ${pcEndorseTotal}
+                        <span>Total: ${pcEndorseTotal}</span> | <span> Page ${pcEndorsePage.number + 1} of ${pcEndorsePage.totalPages}
                     </td>
                 </tr>
             </tfoot>

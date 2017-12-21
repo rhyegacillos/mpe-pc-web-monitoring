@@ -94,7 +94,7 @@
             <tfoot>
                 <tr>
                     <td colspan="22">
-                        Total: ${size}
+                        <span>Total: ${size}</span> | <span> Page ${page.number + 1} of ${page.totalPages}
                     </td>
                 </tr>
             </tfoot>

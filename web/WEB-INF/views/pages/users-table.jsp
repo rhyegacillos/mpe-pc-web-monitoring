@@ -40,7 +40,7 @@
                 <tfoot>
                 <tr>
                     <td colspan="2">
-                        Total: ${totalUsers}
+                        <span>Total: ${totalUsers}</span> | <span> Page ${users.number + 1} of ${users.totalPages}
                     </td>
                     <td colspan="4">
                         <ul class="pagination custom-pagination-tfoot">

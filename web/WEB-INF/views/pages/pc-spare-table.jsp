@@ -42,7 +42,7 @@
                 <tfoot>
                 <tr>
                     <td colspan="2">
-                        Total: ${pcSparesTotal}
+                        <span>Total: ${pcSparesTotal}</span> | <span> Page ${pcSparePage.number + 1} of ${pcSparePage.totalPages}
                     </td>
                     <td colspan="4">
                         <ul class="pagination custom-pagination-tfoot">
