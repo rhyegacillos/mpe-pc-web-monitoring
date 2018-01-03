@@ -45,7 +45,8 @@ ul#menu {
 }
 
 .navbar-nav li:nth-child(7) {
-    margin-left: 200px;
+    position: absolute;
+    right: 20px;
 }
 
 ul.dropdown-menu li a, #logout-web {
@@ -73,6 +74,15 @@ input#logout-web:hover {
 
 .dropdown-menu .divider {
     background-color: rgba(0, 0, 0, 1);
+}
+
+.nav .open > a {
+    background: none;
+    border-color: gold;
+}
+
+li.dropdown a.dropdown-toggle {
+    background: none;
 }
 
 .nav .open>a:focus,

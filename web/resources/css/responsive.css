@@ -1,0 +1,53 @@
+@media(max-width:1140px) {
+    .navbar-nav li:nth-child(7) {
+        position: relative;
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .navbar-nav li:nth-child(7) {
+        width: 100%;
+    }
+
+    a.dropdown-toggle {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 3px;
+        border: 2px solid gold;
+        color: #ffcc33;
+
+    }
+
+    ul.dropdown-menu li a, #logout-web {
+        width: 200px;
+        text-align: left;
+        padding: 0 10px;
+        margin-left: 20px;
+    }
+
+    #logout-web {
+        padding: 5px 10px 5px 30px;
+        margin-left: 20px;
+    }
+
+    input#logout-web:hover {
+        background-color: gold;
+        padding: 5px 10px 5px 30px;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    ul.dropdown-menu li a:hover {
+        padding: 0 10px;
+
+    }
+}
+
+@media(max-width:700px) {
+    #tip-logo {
+        position: relative;
+        display: block;
+        padding-bottom: 10px;
+
+    }
+}
