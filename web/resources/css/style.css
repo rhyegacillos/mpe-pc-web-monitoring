@@ -60,6 +60,10 @@ ul.dropdown-menu li a, #logout-web {
     color: #ffcc33;
 }
 
+.navbar-nav li a:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 ul.dropdown-menu li a:hover {
     background-color: gold;
     padding: 3px;
@@ -169,10 +173,10 @@ body {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 40px;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px 0;
+    padding: 10px 0 5px 0;
     letter-spacing: 2px;
 }
 

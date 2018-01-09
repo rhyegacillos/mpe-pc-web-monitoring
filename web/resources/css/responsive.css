@@ -51,3 +51,14 @@
 
     }
 }
+
+@media(max-width:600px) {
+    .panel .main-title {
+        padding-bottom: 25px;
+    }
+    .panel .main-title .header-link-table {
+        position: relative;
+        color: rgba(249,255,9,0.80);
+        transition: 0.5s;
+    }
+}
