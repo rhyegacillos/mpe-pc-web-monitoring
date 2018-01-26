@@ -177,8 +177,8 @@
                         <div class="form-group col-md-4 col-md-offset-1">
                             <label>NG Occurrence</label>
                             <div class="input-group">
-                                <form:input path="ngOccurrence" cssClass="form-control form-input"/>
-                                <span class="input-group-addon fa-icon"><i class="fa fa-wrench"></i></span>
+                                <form:input path="ngOccurrence" cssClass="form-control form-input alert-ng-occurrence" id="ng-occurrence"/>
+                                <span class="input-group-addon fa-icon wrench"><i class="fa fa-wrench"></i></span>
                             </div>
                             <form:errors path="ngOccurrence" cssClass="error"/>
                         </div>

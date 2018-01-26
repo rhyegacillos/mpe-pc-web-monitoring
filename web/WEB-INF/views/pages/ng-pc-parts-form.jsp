@@ -132,10 +132,10 @@
                             </div>
                         </div>
                         <div class="form-group col-md-4 col-md-offset-2">
-                            <label>MTSB</label>
+                            <label>MTBF</label>
                             <div class="input-group">
                                 <form:input path="lifespan" cssClass="form-control form-input"
-                                            placeholder="MTSB"/>
+                                            placeholder="MTBF"/>
                                 <span class="input-group-addon fa-icon"><i class="fa fa-pencil"></i></span>
                             </div>
                         </div>

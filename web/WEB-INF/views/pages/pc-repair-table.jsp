@@ -64,7 +64,7 @@
             </thead>
             <tbody>
             <c:forEach items="${page.content}" var="pcRepair">
-                <tr>
+                <tr id="alert-ng-occurrence">
                     <td><a href="<spring:url value="/pcRepair/${pcRepair.controlNumber}"/>">${pcRepair.controlNumber}</a></td>
                     <td>${pcRepair.mac}</td>
                     <td>${pcRepair.mobo}</td>
@@ -81,7 +81,7 @@
                     <td>${pcRepair.month}</td>
                     <td>${pcRepair.changeFan}</td>
                     <td>${pcRepair.removedIntakeFan}</td>
-                    <td>${pcRepair.ngOccurrence}</td>
+                    <td id="ngOccurence">${pcRepair.ngOccurrence}</td>
                     <td>${pcRepair.remarks}</td>
                     <td>${pcRepair.dateRepairStart}</td>
                     <td>${pcRepair.dateRepairEnd}</td>
@@ -93,7 +93,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="22">
+                    <td colspan="23">
                         <span>Total: ${size}</span> | <span> Page ${page.number + 1} of ${page.totalPages}
                     </td>
                 </tr>

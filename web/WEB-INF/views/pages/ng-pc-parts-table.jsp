@@ -24,7 +24,7 @@
                 <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=defect,desc"/>" class="th-link">Defect</a></th>
                 <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=datePurchased,desc"/>" class="th-link">Date Purchased</a></th>
                 <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=dateInstalled,desc"/>" class="th-link">Date Installed</a></th>
-                <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=lifespan,desc"/>" class="th-link">MTSB</a></th>
+                <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=lifespan,desc"/>" class="th-link">MTBF</a></th>
                 <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=disposedBy,desc"/>" class="th-link">Disposed By</a></th>
                 <th><a href="<spring:url value="ngPcPartsTable?page=0&sort=remarks,desc"/>" class="th-link">Remarks</a></th>
                 <th>Action</th>
